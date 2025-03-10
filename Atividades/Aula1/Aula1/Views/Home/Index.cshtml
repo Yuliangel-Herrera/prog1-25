@@ -1,8 +1,32 @@
-﻿@{
+﻿@model Variaveis
+@using Aula1.Models
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Bem-Vindos</h1>
+
+    <p>
+		O valor de <b>userCount</b> é: <i>@Model.userCount</i>
+    </p>
+
+    <p>
+		O valor de <b>totalCound</b> é: <i>@Model.totalCount</i>
+    </p>
+
+    <p>O valor mínimo de <b>MinValue</b> é: <i>@Model.MinValue</i></p>
+    <p>O valor mínimo de <b>MaxValue</b> é: <i>@Model.MaxValue</i></p>
+    <p>O valor mínimo de <b>MMinValue</b> é: <i>@Model.MMinValue</i></p>
+    <p>O valor mínimo de <b>MMaxValue</b> é: <i>@Model.MMaxValue</i></p>
+    <p>O valor mínimo de <b>MinValu</b> é: <i>@Model.MinValu</i></p>
+    <p>O valor mínimo de <b>MaxValu</b> é: <i>@Model.MaxValu</i></p>
+    <p>O valor mínimo de <b>MinVal</b> é: <i>@Model.MinVal</i></p>
+    <p>O valor mínimo de <b>MaxVal</b> é: <i>@Model.MaxVal</i></p>
+    <p>O valor mínimo de <b>MinV</b> é: <i>@Model.MinV</i></p>
+    <p>O valor mínimo de <b>MaxV</b> é: <i>@Model.MaxV</i></p>
+  
+
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
