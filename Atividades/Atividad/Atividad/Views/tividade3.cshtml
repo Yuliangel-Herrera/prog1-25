@@ -1,0 +1,17 @@
+@model NumeroPorExtenso.Models.NumeroPorExtensoModel
+
+<h2>Converter Número para Extenso</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label for="Numero">Número:</label>
+        <input asp-for="Numero" type="number" />
+        <span asp-validation-for="Numero" class="text-danger"></span>
+    </div>
+    <button type="submit">Converter</button>
+</form>
+
+@if (ViewBag.Resultado != null)
+{
+<h3>Resultado: @ViewBag.Resultado</h3>
+}
