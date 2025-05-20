@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Dias da Semana"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Dias da semana!</h1>
+    <form method="get" asp-action="GetIf">
+        <div class="form-group">
+            <label for="diaDoIf">Número do dia:</label>
+            <input type="text" name="dia" id="diaDoIf" />
+        </div>
+        <button type="submit" value="GetIf" style="margin-top: 10px;">
+            GetIf
+        </button>
+    </form>
+</div>
+
