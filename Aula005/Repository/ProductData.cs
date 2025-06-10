@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    class ProductData
+    public class ProductData
     {
         public static List<Customer> Customers { get; set; } = [];
         public static List<Product> Products { get; set; } = [];

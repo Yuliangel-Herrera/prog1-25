@@ -2,8 +2,13 @@
 {
     public class Variaveis
     {
+        // Dados primitivos
+        // string, int, float, double, decimal, char, var, bool
+
+        bool mybool = true; 
+
         // Tipos implicitos
-        // var teste = 10;
+        var teste = 10;
 
         // Anotação de Tipos
         public int userCount = 10;
@@ -24,6 +29,8 @@
             // Tipo implícito
             var signalStrength = 20;
             var companyName = "ACME";
+            float myfloat = 10.5f; // Float em C# ?
+            double myDouble = 20.5; // Double em C#
         }
 
         // ATIVIDADE
