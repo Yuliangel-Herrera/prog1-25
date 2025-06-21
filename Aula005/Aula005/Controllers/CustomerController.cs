@@ -143,5 +143,33 @@ namespace Aula005.Controllers
 
                 return ret;
         }
+
+        [HttpGet]
+        public IActionResult Update(int? id)
+        {
+            if (id == null || id.Value <= 0)
+                return NotFound();
+
+            var customer = _customerRepository.Retrieve(id.Value);
+            if (customer == null)
+                return NotFound();
+
+            return View(customer); // abre a view Update.cshtml
+        }
+
+        [HttpPost]
+        public IActionResult ConfirmUpdate(Customer updatedCustomer)
+        {
+            if (updatedCustomer == null || !updatedCustomer.Validade())
+                return View("Update", updatedCustomer); // Validação falhou, retorna para a view
+
+            // Atualiza o cliente no repositório
+            _customerRepository.Update(updatedCustomer);
+
+            // Recarrega todos os clientes atualizados e exibe a lista
+            List<Customer> customers = _customerRepository.RetrieveAll();
+            return View("Index", customers);
+        }
+
     }
 }

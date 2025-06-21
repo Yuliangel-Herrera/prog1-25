@@ -1,5 +1,63 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Model.Customer
+
 @{
+    ViewData["Title"] = "Editar Cliente";
 }
+
+<h2>Editar Cliente</h2>
+
+<form method="post" asp-action="ConfirmUpdate" asp-controller="Customer">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Nome</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <h4>Endereço Residencial</h4>
+    <div class="mb-3">
+        <label class="form-label">Rua</label>
+        <input asp-for="HomeAddres.Street" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cidade</label>
+        <input asp-for="HomeAddres.City" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <input asp-for="HomeAddres.State" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">País</label>
+        <input asp-for="HomeAddres.Country" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input asp-for="HomeAddres.cep" class="form-control" />
+    </div>
+
+    <h4>Endereço Comercial (Opcional)</h4>
+    <div class="mb-3">
+        <label class="form-label">Rua</label>
+        <input asp-for="WorkAddres.Street" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cidade</label>
+        <input asp-for="WorkAddres.City" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <input asp-for="WorkAddres.State" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">País</label>
+        <input asp-for="WorkAddres.Country" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input asp-for="WorkAddres.cep" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar Alterações</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
